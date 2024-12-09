@@ -1,0 +1,25 @@
+
+.tarifCards {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .selected {
+    border: 2px solid #f39c12; 
+    transform: scale(1.05); 
+  }
+  
+  .tarifCards:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }
+  
+ 
+  .blueCard { background-color: #3498db; }
+  .greenCard { background-color: #2ecc71; }
+  .redCard { background-color: #e74c3c; }
+  .blackCard { background-color: #2d3436; }
+  .highlighted { box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  .tarifTitle, .tarifPrice, .tarifMegaBaits, .tarifDescription {
+    color: white;
+  }
+  
