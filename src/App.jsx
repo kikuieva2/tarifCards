@@ -1,16 +1,48 @@
 
 import './app/App.css'
-import TarifCards from "./components/TarifCards";
-import CardStyleTrafic from "./components/CardStyleTrafic";
 
 
 function App() {
+  import React, { useState } from 'react';
+
+const TextFormatter = () => {
+  const [inputText, setInputText] = useState('');  // Хранение текста в поле ввода
+  const [formattedText, setFormattedText] = useState('');  // Хранение отформатированного текста
+
+  // Обработчик для обновления состояния ввода
+  const handleInputChange = (e) => {
+    setInputText(e.target.value);
+  };
+
+  // Обработчик для форматирования текста при нажатии кнопки
+  const handleButtonClick = () => {
+    const formatted = inputText.toUpperCase();  // Пример форматирования - перевод в заглавные буквы
+    setFormattedText(formatted);
+  };
+
   return (
-    <>
-    <TarifCards/>
-    <CardStyleTrafic/>
-    </>
-  )
+    <div>
+      <div>
+        <input 
+          type="text" 
+          value={inputText} 
+          onChange={handleInputChange} 
+          placeholder="Введите текст" 
+        />
+        <button onClick={handleButtonClick}>Показать отформатированный текст</button>
+      </div>
+      
+      {formattedText && (
+        <div style={{ marginTop: '20px', color: 'blue', fontSize: '18px' }}>
+          <strong>Отформатированный текст:</strong> {formattedText}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default TextFormatter;
+
 }
 
 export default App
