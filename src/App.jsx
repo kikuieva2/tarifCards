@@ -6,8 +6,8 @@ function App() {
   import React, { useState } from 'react';
 
 const TextFormatter = () => {
-  const [inputText, setInputText] = useState('');  // Хранение текста в поле ввода
-  const [formattedText, setFormattedText] = useState('');  // Хранение отформатированного текста
+  const [inputText, setInputText] = useState(''); 
+  const [formattedText, setFormattedText] = useState('');  
 
   // Обработчик для обновления состояния ввода
   const handleInputChange = (e) => {
